@@ -89,6 +89,12 @@ starter/
 - Vite 7.x
 - Udacity Books API
 
+## Future Features / TODO
+
+- **Drag and Drop**: Add drag-and-drop functionality to move books between shelves
+- **User Accounts**: Add sign-up and log-in functionality to allow users to save their bookshelves to their accounts
+- **Persistent Storage**: Backend integration for user-specific book data
+
 ## Original Project
 
 This project is based on the Udacity React Nanodegree MyReads project, migrated from Create React App to Vite for improved build performance and Node.js compatibility.
