@@ -10,14 +10,16 @@ const Bookshelf = ({ title, books, onUpdateShelf }) => {
             <li key={book.id}>
               <div className="book">
                 <div className="book-top">
-                  <div
-                    className="book-cover"
-                    style={{
-                      width: 128,
-                      height: 193,
-                      backgroundImage: `url("${book.imageLinks?.thumbnail || ''}")`,
-                    }}
-                  />
+                  <Link to={`/book/${book.id}`}>
+                    <div
+                      className="book-cover"
+                      style={{
+                        width: 128,
+                        height: 193,
+                        backgroundImage: `url("${book.imageLinks?.thumbnail || ''}")`,
+                      }}
+                    />
+                  </Link>
                   <div className="book-shelf-changer">
                     <select
                       value={book.shelf || 'none'}
@@ -34,8 +36,8 @@ const Bookshelf = ({ title, books, onUpdateShelf }) => {
                   </div>
                 </div>
                 <div className="book-title">
-              <Link to={`/book/${book.id}`}>{book.title}</Link>
-            </div>
+                  <Link to={`/book/${book.id}`}>{book.title}</Link>
+                </div>
                 <div className="book-authors">{book.authors?.join(', ')}</div>
               </div>
             </li>
