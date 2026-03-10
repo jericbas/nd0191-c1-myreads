@@ -71,7 +71,9 @@ const SearchPage = ({ myBooks, onUpdateShelf }) => {
                     </select>
                   </div>
                 </div>
-                <div className="book-title">{book.title}</div>
+                <div className="book-title">
+              <Link to={`/book/${book.id}`}>{book.title}</Link>
+            </div>
                 <div className="book-authors">{book.authors?.join(', ')}</div>
               </div>
             </li>

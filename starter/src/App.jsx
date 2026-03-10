@@ -4,6 +4,7 @@ import './App.css';
 import * as BooksAPI from './BooksAPI';
 import ListBooks from './ListBooks';
 import SearchPage from './SearchPage';
+import BookDetail from './BookDetail';
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -38,6 +39,9 @@ const App = () => {
         </Route>
         <Route path="/search">
           <SearchPage myBooks={books} onUpdateShelf={updateBookShelf} />
+        </Route>
+        <Route path="/book/:id">
+          <BookDetail myBooks={books} onUpdateShelf={updateBookShelf} />
         </Route>
       </Switch>
     </div>
